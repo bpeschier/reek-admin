@@ -9,8 +9,8 @@ body {
   -webkit-font-smoothing: antialiased; }
 
 .main-header {
-  background-color: black;
-  color: white;
+  background-color: #417690;
+  color: #ffc;
   padding: 10px 20px; }
 
 .main-navigation {
@@ -23,7 +23,7 @@ body {
     -webkit-flex: 1;
     flex: 1; }
     .main-navigation > h1 > a {
-      color: white;
+      color: #f4f379;
       text-decoration: none; }
       .main-navigation > h1 > a:hover {
         text-decoration: underline; }
@@ -41,14 +41,15 @@ body {
   -webkit-justify-content: center;
   justify-content: center; }
   .main > form {
+    -webkit-align-self: center;
     align-self: center;
-    background-color: #eee;
+    background-color: #efefef;
     border: 1px solid #ccc;
     padding: 20px 20px 30px 20px;
     margin-bottom: 60px; }
 
 .main-sidebar {
-  background-color: #eeeeee;
+  background-color: #efefef;
   padding: 20px 0; }
 
 .main-content {
@@ -100,7 +101,7 @@ select {
   -webkit-appearance: textfield; }
 
 button {
-  background-color: #eee;
+  background-color: #efefef;
   color: #333;
   text-transform: uppercase;
   font-size: 14px; }
@@ -113,7 +114,7 @@ button {
   .admin-object-list > tbody > tr > td {
     padding: 16px; }
   .admin-object-list > tbody > tr:nth-child(2n) {
-    background-color: #eee; }
+    background-color: #EDF3FE; }
 
 .form-controls > p > label {
   display: inline-block;
@@ -121,3 +122,8 @@ button {
   margin-bottom: 8px;
   font-weight: bold;
   color: #666; }
+
+a {
+  color: #5b80b2; }
+  a:hover {
+    color: #036; }

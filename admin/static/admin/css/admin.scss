@@ -13,8 +13,8 @@ body {
 }
 
 .main-header {
-  background-color: black;
-  color: white;
+  background-color: #417690;
+  color: #ffc;
   padding: 10px 20px;
 }
 
@@ -28,7 +28,7 @@ body {
     -webkit-flex: 1;
     flex: 1;
     > a {
-      color: white;
+      color: #f4f379;
       text-decoration: none;
       &:hover {
         text-decoration: underline;
@@ -55,8 +55,9 @@ body {
   justify-content: center;
 
   > form {
+    -webkit-align-self: center;
     align-self: center;
-    background-color: #eee;
+    background-color: #efefef;
     border: 1px solid #ccc;
     padding: 20px 20px 30px 20px;
     margin-bottom: 60px;
@@ -64,7 +65,7 @@ body {
 }
 
 .main-sidebar {
-  background-color: #eeeeee;
+  background-color: #efefef;
   padding: 20px 0;
 }
 
@@ -136,7 +137,7 @@ select {
 }
 
 button {
-  background-color: #eee;
+  background-color: #efefef;
   color: #333;
   text-transform: uppercase;
   font-size: 14px;
@@ -155,7 +156,7 @@ button {
         padding: 16px;
       }
       &:nth-child(2n) {
-        background-color: #eee;
+        background-color: #EDF3FE;
       }
     }
   }
@@ -170,5 +171,12 @@ button {
       font-weight: bold;
       color: #666;
     }
+  }
+}
+
+a {
+  color: #5b80b2;
+  &:hover {
+    color: #036;
   }
 }

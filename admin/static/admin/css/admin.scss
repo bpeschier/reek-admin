@@ -4,7 +4,9 @@ body {
   font-family: "Helvetica Neue", "Arial", sans-serif;
   font-size: 18px;
 
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-direction: column;
   flex-direction: column;
 
   -webkit-font-smoothing: antialiased;
@@ -17,11 +19,13 @@ body {
 }
 
 .main-navigation {
+  display: -webkit-flex;
   display: flex;
   > h1 {
     font-weight: normal;
     font-size: 24px;
     margin: 0;
+    -webkit-flex: 1;
     flex: 1;
     > a {
       color: white;
@@ -43,8 +47,11 @@ body {
 .main {
   position: relative;
 
+  display: -webkit-flex;
   display: flex;
+  -webkit-flex-grow: 1;
   flex-grow: 1;
+  -webkit-justify-content: center;
   justify-content: center;
 
   > form {
@@ -63,6 +70,7 @@ body {
 
 .main-content {
   padding: 20px 30px;
+  -webkit-flex: 1;
   flex: 1;
 
   > h2 {
@@ -108,8 +116,7 @@ button, select, input[type="text"], input[type="password"], textarea {
   display: block;
   border-radius: 0;
   padding: 8px 10px;
-  background-image: none;
-  background-color: #fff;
+  background: #fff none;
   border: 1px solid #ccc;
   font-size: 18px;
 

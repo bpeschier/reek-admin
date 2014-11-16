@@ -3,7 +3,7 @@
 {% block content %}
   <h2>{{ admin.verbose_name }}</h2>
   <p>
-    <a href="{% url admin.urls.create.reverse_name %}">Voeg toe</a>
+    <a href="{{ admin.urls.create.url }}">Voeg toe</a>
   </p>
   <table class="admin-object-list">
     <thead>
@@ -20,7 +20,7 @@
         {% for column in admin.list_display %}
           <td>
             {% if forloop.first %}
-              <a href="{% url admin.urls.update.reverse_name pk=object.pk %}">
+              <a href="{% url admin.urls.update.url_name pk=object.pk %}">
                 {{ object }}
               </a>
             {% else %}
@@ -29,7 +29,7 @@
           </td>
         {% endfor %}
         <td>
-          <a href="{% url admin.urls.delete.reverse_name pk=object.pk %}">Verwijder</a>
+          <a href="{% url admin.urls.delete.url_name pk=object.pk %}">Verwijder</a>
         </td>
       </tr>
     {% endfor %}

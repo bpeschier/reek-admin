@@ -35,7 +35,7 @@ class AdminContextMixin(SiteContextMixin):
         return context
 
     def get_success_url(self):
-        return reverse(self.admin.urls['index'].reverse_name)
+        return reverse(self.admin.urls['index'].url_name)
 
     def get_template_names(self):
         info = dict(

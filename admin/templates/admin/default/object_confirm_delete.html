@@ -1,0 +1,10 @@
+{% extends site.template_admin_base %}
+{% load i18n %}
+
+{% block content %}
+  <h2>{{ object }}</h2>
+  <form action="" method="post">
+    {% csrf_token %}
+    <input type="submit" value="{% trans "Yes, I'm sure" %}"/>
+  </form>
+{% endblock %}

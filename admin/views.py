@@ -1,6 +1,5 @@
 from django.conf import settings
 from django.contrib.auth import login, REDIRECT_FIELD_NAME, logout
-from django.contrib.auth.forms import AuthenticationForm
 from django.core.urlresolvers import reverse, reverse_lazy
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import resolve_url
@@ -78,8 +77,14 @@ class BaseAdminMixin(StaffRequiredMixin, AdminContextMixin):
 
 class LoginView(SiteContextMixin, FormView):
     template_name = 'admin/login.html'
-    form_class = AuthenticationForm
     success_url = reverse_lazy('admin:index')
+
+    def get_form_class(self):
+        # Since this module gets imported in the application's root package,
+        # we cannot import this form without triggering import of auth models.
+        from django.contrib.auth.forms import AuthenticationForm
+
+        return AuthenticationForm
 
     def form_valid(self, form):
         redirect_to = self.get_success_url()

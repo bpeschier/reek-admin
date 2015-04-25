@@ -105,8 +105,6 @@ class AppAdminSection(AdminSection):
 #
 
 class Admin(LabeledURLs):
-    list_display = ['__str__']
-
     def __init__(self, section=None):
         self.section = section
         super().__init__()
@@ -163,6 +161,7 @@ class Admin(LabeledURLs):
 
 class ModelAdmin(Admin):
     model = None
+    list_display = ('__str__',)
     fields = '__all__'  # The admin shows all fields by default... for now
 
     index = urlconf.URL(r'^$', views.ListView, name='{app}_{model}_index')
